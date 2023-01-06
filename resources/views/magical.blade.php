@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,14 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        color: greenyellow;
+        background: lightcoral;
+    }
+
+    a {
+        color: grey;
+    }
+</style>
 
 <body>
-    <h1> Magical tests of url</h1>
 
+    <h2>Heyy, It's Magical Blade template for frontend.</h2>
+    <p>The Current Date is {{date('D d M Y')}}.</p>
+    <p>Total Number is {{3+5}} </p>
     <br>
     <h3><a href="/about">About</a></h3>
     <h3><a href="/">Home</a></h3>
-    
+
 </body>
 
 </html>
