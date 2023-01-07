@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ExampleController::class, 'homepage']);
 
+Route::get('/post', [ExampleController::class, 'singlepostpage']);
+
 Route::get('/about', [ExampleController::class, 'aboutpage']);
 
-Route::get('/magic', [ExampleController::class, 'magicurlpage']);
