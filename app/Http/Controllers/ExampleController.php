@@ -19,6 +19,11 @@ class ExampleController extends Controller
 
     public function magicurlpage()
     {
-        return view('magical');
+
+        $username = "faisalahammed044274";
+        $repoName = "Laravel 9 Learning Path";
+        $animals = ['dog','cat','monkey','Elephant','Camel'];
+
+        return view('magical',['username' => $username, 'repoName' => $repoName , 'allAnimals'=>$animals]);
     }
 }
