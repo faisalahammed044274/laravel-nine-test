@@ -23,4 +23,20 @@ class UserController extends Controller
 
         return "This is register function calling";
     }
+
+    public function login(Request $request){
+        $incomingFields = $request->validate([
+
+        'loginusername' => 'required',
+        'loginpassword' => 'required',
+
+        ]);
+
+        if (auth()->attempt(['username' => $incomingFields['loginusername'], 'password' => $incomingFields['loginpassword']])){
+            $request->session()->regenerate();
+            return 'Congratulations !!!'; 
+        }else{
+            return 'Sorry ! Please enter the correct username and password.';
+        }
+    }
 }
