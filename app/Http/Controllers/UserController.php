@@ -39,4 +39,12 @@ class UserController extends Controller
             return 'Sorry ! Please enter the correct username and password.';
         }
     }
+
+    public function showCorrectHomepage(){
+        if (auth()->check()){
+            return view('homepage-feed');
+        }else{
+            return view('homepage');
+        }
+    } 
 }
