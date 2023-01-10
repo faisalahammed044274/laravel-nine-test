@@ -37,7 +37,7 @@ class UserController extends Controller
             $request->session()->regenerate();
             return redirect('/')->with('welcome', 'Welcome !!! You are successfully loggedin.');
         } else {
-            return 'Sorry ! Please enter the correct username and password.';
+            return redirect('/');
         }
     }
 
@@ -53,6 +53,6 @@ class UserController extends Controller
     public function logout()
     {
         auth()->logout();
-        return redirect('/')->with('success', 'You are logged out !');
+        return redirect('/')->with('success', 'You are successfully logged out !');
     }
 }

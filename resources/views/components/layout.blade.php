@@ -52,7 +52,24 @@
     <!-- header ends here -->
 
 
+@if (session()->has('success'))
+<div class="container container--narrow">
+    <div class="alert alert-success text-center">
+      {{ session('success') }}
+    </div>
+</div>
+
+@elseif(session()->has('welcome'))
+<div class="container container-narrow">
+  <div class="alert alert-success text-center">
+    {{ session('welcome') }}
+  </div>
+</div>
+  
+@endif
+
 {{$slot}}
+
 
         <!-- footer begins -->
         <footer class="border-top text-center small text-muted py-3">
