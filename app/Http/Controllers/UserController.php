@@ -37,7 +37,7 @@ class UserController extends Controller
             $request->session()->regenerate();
             return redirect('/')->with('welcome', 'Welcome !!! You are successfully loggedin.');
         } else {
-            return redirect('/');
+            return redirect('/')->with('failure','Request Failed ! Please check your information and try  later.');
         }
     }
 
