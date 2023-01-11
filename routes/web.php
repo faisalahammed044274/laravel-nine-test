@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +14,12 @@ use App\Http\Controllers\ExampleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// User Related Routes
 Route::get('/', [UserController::class, 'showCorrectHomepage']);
-
 Route::post('/register', [UserController::class, 'register']);
-
 Route::post('/login', [UserController::class, 'login']);
-
 Route::post('/logout', [UserController::class, 'logout']);
+
+//Blog Post Related Routes
+Route::get('/create-post', [PostController::class, 'showCreateForm']);
+Route::post('/create-post', [PostController::class, 'storeNewPost']);
