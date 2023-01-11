@@ -77,6 +77,12 @@
   
 @endif
 
+@if(session()->has('message'))
+<div class="alert alert-success" x-data="{show: true}" x-init="setTimeout(() => show = false, 2500)" x-show="show">
+    {{ session()->get('message') }}
+</div>
+@endif
+
 {{$slot}}
 
 
