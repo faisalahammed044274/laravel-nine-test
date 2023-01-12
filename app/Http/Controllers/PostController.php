@@ -22,6 +22,7 @@ class PostController extends Controller
             'body' => 'required'
         ]);
 
+        //strip_tags helps to prevent inject malicious scripts 
         $incomingFields['title'] = strip_tags($incomingFields['title']);
         $incomingFields['body'] = strip_tags($incomingFields['body']);
         $incomingFields['user_id'] = auth()->id();
