@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container py-md-5 container--narrow">
       <div class="d-flex justify-content-between">
-        <h2>Example Post Title Here</h2>
+        <h2>{{$post->title}}</h2>
         <span class="pt-2">
           <a href="#" class="text-primary mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fas fa-edit"></i></a>
           <form class="delete-post-form d-inline" action="#" method="POST">
@@ -16,9 +16,10 @@
       </p>
 
       <div class="body-content">
-        <p>My roommate yells at me when I destroy things, but I do what I want.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam praesentium laboriosam unde fuga accusamus reiciendis laudantium quis consequatur, beatae temporibus nemo, tempora voluptatum, perspiciatis accusantium ullam molestiae cupiditate incidunt architecto.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam praesentium laboriosam unde fuga accusamus reiciendis laudantium quis consequatur, beatae temporibus nemo, tempora voluptatum, perspiciatis accusantium ullam molestiae cupiditate incidunt architecto.</p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Nisi nemo facere dolore sit magnam delectus quaerat consectetur odit consequatur 
+          doloremque commodi optio aspernatur eaque,
+          dolores non quos quas facilis rerum autem ad aliquam laboriosam veritatis?
       </div>
     </div>
 </x-layout>
