@@ -24,9 +24,9 @@ class PostController extends Controller
         $incomingFields['body'] = strip_tags($incomingFields['body']);
         $incomingFields['user_id'] = auth()->id();
 
-        Post::create($incomingFields);
+        $newPost = Post::create($incomingFields);
 
-        return redirect()->back()->with('message', 'Post Created Successfully');
+        return redirect("/post/{$newPost->id}")->with('message', 'Post Created Successfully');
     }
 
     function showCreateForm()
