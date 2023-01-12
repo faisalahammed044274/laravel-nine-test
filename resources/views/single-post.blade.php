@@ -16,10 +16,7 @@
       </p>
 
       <div class="body-content">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-          Nisi nemo facere dolore sit magnam delectus quaerat consectetur odit consequatur 
-          doloremque commodi optio aspernatur eaque,
-          dolores non quos quas facilis rerum autem ad aliquam laboriosam veritatis?
+      {!! $post->body !!}
       </div>
     </div>
 </x-layout>
