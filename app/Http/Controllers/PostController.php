@@ -34,10 +34,9 @@ class PostController extends Controller
 
     function showCreateForm()
     {
-        if (!auth()->check()) {
-            return redirect('/')->with('message','You are not authorized to access! Please login to create your post.');
-        }
-
+        // if (!auth()->check()) {
+        //     return redirect('/')->with('message','You are not authorized to access! Please login to create your post.');
+        // }
         return view('create-post');
     }
 }
