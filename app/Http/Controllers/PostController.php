@@ -19,10 +19,10 @@ class PostController extends Controller
     {
         $incomingFields = $request->validate([
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
         ]);
 
-        //strip_tags helps to prevent inject malicious scripts 
+        //strip_tags helps to prevent inject malicious scripts
         $incomingFields['title'] = strip_tags($incomingFields['title']);
         $incomingFields['body'] = strip_tags($incomingFields['body']);
         $incomingFields['user_id'] = auth()->id();
