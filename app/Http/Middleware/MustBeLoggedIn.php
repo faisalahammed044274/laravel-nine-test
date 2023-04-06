@@ -20,6 +20,6 @@ class MustBeLoggedIn
             return $next($request);
         }
 
-        return redirect('/')->with('failure', 'please logged in !');
+        return redirect('/')->with('failure', 'You Must be logged in !');
     }
 }
